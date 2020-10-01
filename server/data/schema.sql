@@ -5,24 +5,13 @@ DROP TABLE IF EXISTS Projects;
 -- TODO: remigrate the DB here
 CREATE TABLE Users
 (
+  login VARCHAR(150) NOT NULL,
   id SERIAL PRIMARY KEY,
-  github_token VARCHAR(255) NOT NULL,
-  auth_token VARCHAR(255) NOT NULL,
-  experience_lvl SMALLINT CHECK (experience_lvl >= 0),
-  position VARCHAR(255),
-  company VARCHAR(255),
-  github_username VARCHAR(255) NOT NULL,
-  github_id INTEGER NOT NULL CHECK (github_id >= 0),
-  github_url VARCHAR(255) NOT NULL,
-  avatar_url VARCHAR(255) NOT NULL,
-  gravatar_url VARCHAR(255) NOT NULL,
-  last_login TIMESTAMP,
-  is_superuser BOOLEAN NOT NULL,
-  name VARCHAR(150) NOT NULL,
-  email VARCHAR(254) NOT NULL,
-  is_active BOOLEAN NOT NULL,
-  date_joined TIMESTAMPTZ NOT NULL,
-  hireable BOOLEAN NOT NULL
+  node_id "MDQ6VXNlcjM3MzM3NzM=",
+  avatar_url "https://avatars3.githubusercontent.com/u/3733773?v=4",
+  name "Rey Dekker",
+  bio "She's Coding Seattle Chapter Lead Humanitarian Loves Typescript",
+  html_url "https://github.com/nurmerey",
 );
 
 CREATE TABLE Projects
